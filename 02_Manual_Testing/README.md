@@ -23,6 +23,7 @@ Each test scenario includes the following information:
 - Test Technique  
 - Status
 - Priority
+- Execution Type
 
 > These test scenarios are based on ISTQB test design techniques and created for portfolio purposes.
 >
