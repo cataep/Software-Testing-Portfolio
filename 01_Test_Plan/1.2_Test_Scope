@@ -1,0 +1,20 @@
+# 1.2 Test Scope
+
+## In-Scope
+The following features and components are included in the scope of testing:
+- Core functional requirements of the application.  
+- User interface validations (layout, usability, and responsiveness).  
+- Integration between different modules.  
+- API request and response validation.  
+- Security checks for authentication and authorization.  
+- Compatibility testing across supported browsers and devices.  
+
+## Out-of-Scope
+The following features and components are excluded from the scope of testing:
+- Third-party systems and services not owned by the project team.  
+- Performance and load testing beyond basic responsiveness checks.  
+- Features planned for future releases but not included in the current version.  
+- Unsupported platforms, browsers, or devices.  
+
+## Scope Summary
+The scope definition ensures that test efforts are focused on the agreed features, reducing wasted effort on non-critical areas.  
