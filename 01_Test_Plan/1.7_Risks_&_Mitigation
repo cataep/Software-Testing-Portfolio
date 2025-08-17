@@ -1,0 +1,16 @@
+# 1.7 Risks & Mitigation
+
+The following potential risks may impact the testing process, along with mitigation strategies:
+
+| Risk ID | Risk Description                              | Impact  | Probability | Mitigation Strategy                                   |
+|---------|-----------------------------------------------|---------|-------------|-------------------------------------------------------|
+| R1      | Test environment not ready on time            | High    | Medium      | Engage with DevOps team early, prepare backup setup   |
+| R2      | Requirement changes during testing phase      | High    | High        | Maintain close communication with stakeholders, update test cases accordingly |
+| R3      | Limited availability of test data             | Medium  | Medium      | Create synthetic test data, request early data access |
+| R4      | High defect density in early builds           | High    | Medium      | Prioritize critical test cases, conduct early smoke tests |
+| R5      | Resource constraints (testers unavailable)    | Medium  | Low         | Cross-train team members, adjust schedule as needed   |
+| R6      | Tools or licenses not accessible              | Medium  | Low         | Verify tool availability in advance, have free/open-source alternatives ready |
+
+**Notes:**
+- Risks will be monitored continuously.  
+- Mitigation plans will be updated as needed throughout the project.  
