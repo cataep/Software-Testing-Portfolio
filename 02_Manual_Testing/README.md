@@ -1,6 +1,13 @@
 # 02 – Manual Testing (BankApp)
 
 This folder contains the manual test scenarios prepared for the BankApp application.  
+## Transparency Note
+All manual test cases listed here are **simulation-based** for portfolio purposes.  
+There is **no real execution**; any Pass/Fail examples shown are illustrative.
+
+### Relation to Test Plan
+This section implements the approach described in **01_Test_Plan → 1.8 Assumptions & Limitations**, where all manual tests are defined as **simulation**.
+
 
 ## File
 - [→ Test_Scenarios.xlsx](./Test_Scenarios.xlsx)
@@ -45,17 +52,6 @@ Some of these scenarios were actually executed on the application (Real), while 
 | TC10 | Session timeout after inactivity | User is logged in | 1. Login <br> 2. Stay inactive <br> 3. Wait 15 min | System logs user out automatically | Functional | State Transition Testing | Low | Not Executed | Simulation |
 
 ---
-
-### Relation to Test Plan  
-
-- These manual test cases are designed in alignment with the **01_Test_Plan** document.  
-- **Scope (1.2 Test Scope):** All functional manual test cases (TC01–TC08) are directly within the defined scope. Load and timeout scenarios (TC09–TC10) are marked as supportive and simulation-based.  
-- **Assumptions & Limitations (1.8):**  
-  - TC01–TC08 were executed on the demo banking application and represent real manual execution.  
-  - TC09–TC10 could not be fully executed due to environmental constraints and are presented as simulation-based test cases.  
-- **Traceability:** Each test case can be traced back to requirements and risks outlined in the Test Plan.  
-- **Priority:** Priorities assigned in the test cases table are consistent with the risk-based approach described in the Test Plan.  
-
 
 
  Note: Defect reports generated from these scenarios will be presented in the **09_Bug_Reports** section of the portfolio.
