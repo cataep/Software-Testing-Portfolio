@@ -26,3 +26,5 @@ The test plan defines the scope, objectives, strategy, resources, and schedule o
 7. [Risks & Mitigation](1.7_Risks_&_Mitigation.md)  
    Identifies risks and mitigation strategies.  
 
+8. [Assumptions & Limitations](1.8_Assumptions_&_Limitations.md)   
+   States assumptions made during test planning and highlights known limitations.  
