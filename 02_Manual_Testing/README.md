@@ -11,7 +11,8 @@ This section implements the approach described in **01_Test_Plan → 1.8 Assumpt
 where all manual tests are defined as **simulation**.
 
 ## File
-- 02_Manual_Testing/Manual_Test_Scenarios_with_Status.xlsx
+[Manual_Test_Scenarios_with_Status.xlsx](./Manual_Test_Scenarios_with_Status.xlsx)
+
 
 ## Covered Test Types
 - Functional Tests  
