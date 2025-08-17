@@ -43,6 +43,18 @@ Some of these scenarios were actually executed on the application (Real), while 
 | TC09 | Load test with 1000 users | Test environment prepared | 1. Simulate 1000 users logging in simultaneously | System performance under load | Non-functional | Load Testing | Medium | Not Executed | Simulation |
 | TC10 | Session timeout after inactivity | User is logged in | 1. Login <br> 2. Stay inactive <br> 3. Wait 15 min | System logs user out automatically | Functional | State Transition Testing | Low | Not Executed | Simulation |
 
+---
+
+### Relation to Test Plan  
+
+- These manual test cases are designed in alignment with the **01_Test_Plan** document.  
+- **Scope (1.2 Test Scope):** All functional manual test cases (TC01–TC08) are directly within the defined scope. Load and timeout scenarios (TC09–TC10) are marked as supportive and simulation-based.  
+- **Assumptions & Limitations (1.8):**  
+  - TC01–TC08 were executed on the demo banking application and represent real manual execution.  
+  - TC09–TC10 could not be fully executed due to environmental constraints and are presented as simulation-based test cases.  
+- **Traceability:** Each test case can be traced back to requirements and risks outlined in the Test Plan.  
+- **Priority:** Priorities assigned in the test cases table are consistent with the risk-based approach described in the Test Plan.  
+
 
 
  Note: Defect reports generated from these scenarios will be presented in the **09_Bug_Reports** section of the portfolio.
