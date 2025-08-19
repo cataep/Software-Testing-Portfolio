@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "ce6ece61-49c4-46ad-89d6-bc1bcfe41294",
+		"name": "API Testing-Reqres",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41080684",
+		"_collection_link": "https://nj2222-9300.postman.co/workspace/Software-Testing-Portfolio~9691b961-1106-4f87-81cd-bc3b6fc89679/collection/41080684-ce6ece61-49c4-46ad-89d6-bc1bcfe41294?action=share&source=collection_link&creator=41080684"
+	},
+	"item": [
+		{
+			"name": "API-001_Get Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", () => pm.response.code === 200);",
+							"const json = pm.response.json();",
+							"pm.test(\"Page is 2\", () => json.page === 2);",
+							"pm.test(\"Has users array\", () => Array.isArray(json.data) && json.data.length > 0);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/api/users?page=2",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API-002_Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response has token\", function () {",
+							"  const jsonData = pm.response.json();",
+							"  pm.expect(jsonData).to.have.property(\"token\");",
+							"});",
+							"",
+							"pm.test(\"Token is not empty\", function () {",
+							"  const jsonData = pm.response.json();",
+							"  pm.expect(jsonData.token).to.not.be.empty;",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"eve.holt@reqres.in\",\n    \"password\": \"cityslicka\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API-003_Missing_password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 400 dönmeli",
+							"pm.test(\"Status is 400\", function () {",
+							"  pm.response.to.have.status(400);",
+							"});",
+							"",
+							"// JSON'da 'error' alanı olmalı ve mesaj doğru olmalı",
+							"const json = pm.response.json();",
+							"pm.test(\"Error message is 'Missing password'\", function () {",
+							"  pm.expect(json).to.have.property(\"error\");",
+							"  pm.expect(json.error).to.eql(\"Missing password\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"peter@klaven\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://reqres.in",
+			"type": "default"
+		}
+	]
+}
