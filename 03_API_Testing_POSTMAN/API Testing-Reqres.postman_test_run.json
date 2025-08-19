@@ -1,0 +1,145 @@
+{
+	"id": "da23e07f-2b1f-4929-96e9-4ca7905589d1",
+	"name": "API Testing-Reqres",
+	"timestamp": "2025-08-19T15:57:49.463Z",
+	"collection_id": "41080684-ce6ece61-49c4-46ad-89d6-bc1bcfe41294",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 8,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-08-19T15:57:48.470Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "63b2cc57-a163-4a13-a764-5eb2e0a518fa",
+			"name": "API-001_Get Users",
+			"url": "https://reqres.in/api/users?page=2",
+			"time": 100,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Page is 2": true,
+				"Has users array": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Page is 2": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has users array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				100
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Page is 2": true,
+					"Has users array": true
+				}
+			]
+		},
+		{
+			"id": "c274980b-c409-4dc9-8ae1-9ac06cdd81b9",
+			"name": "API-002_Login",
+			"url": "https://reqres.in/api/login",
+			"time": 180,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has token": true,
+				"Token is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has token": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Token is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				180
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has token": true,
+					"Token is not empty": true
+				}
+			]
+		},
+		{
+			"id": "8ded7fcf-8c06-461a-9e51-1fc9000f9d81",
+			"name": "API-003_Missing_password",
+			"url": "https://reqres.in/api/login",
+			"time": 146,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status is 400": true,
+				"Error message is 'Missing password'": true
+			},
+			"testPassFailCounts": {
+				"Status is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error message is 'Missing password'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				146
+			],
+			"allTests": [
+				{
+					"Status is 400": true,
+					"Error message is 'Missing password'": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 426,
+	"collection": {
+		"requests": [
+			{
+				"id": "63b2cc57-a163-4a13-a764-5eb2e0a518fa",
+				"method": "GET"
+			},
+			{
+				"id": "c274980b-c409-4dc9-8ae1-9ac06cdd81b9",
+				"method": "POST"
+			},
+			{
+				"id": "8ded7fcf-8c06-461a-9e51-1fc9000f9d81",
+				"method": "POST"
+			}
+		]
+	}
+}
